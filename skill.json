@@ -1,0 +1,58 @@
+{
+  "name": "genpark-personal-agent-blue-light-melanopic-lux-circadian-entrainment-skill",
+  "version": "1.0.0",
+  "title": "Melanopic Lux Circadian Light Entrainment & Blue Blocker Skill",
+  "description": "Retinal intrinsically photosensitive retinal ganglion cell (ipRGC) melanopic lux calculation, nocturnal melatonin preservation, and blue-blocker filter scheduler. Built for GenPark (https://www.genpark.ai).",
+  "homepage": "https://www.genpark.ai",
+  "linkedin": "https://www.linkedin.com/company/92955550",
+  "category": "personal-agent",
+  "topics": [
+    "melanopic-lux",
+    "circadian-lighting",
+    "blue-light",
+    "iprgc-receptors",
+    "sleep-hygiene",
+    "personal-agent",
+    "model-context-protocol",
+    "genpark"
+  ],
+  "tools": [
+    {
+      "name": "calculate_melanopic_equivalent_daylight_lux",
+      "description": "Convert photopic lux to Melanopic Equivalent Daylight Lux (m-EDI) for indoor office lighting.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "photopic_lux": {
+            "type": "number"
+          },
+          "melanopic_daylight_efficacy_ratio": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "photopic_lux"
+        ]
+      }
+    },
+    {
+      "name": "synthesize_nocturnal_display_filter_profile",
+      "description": "Generate night-shift display color temperature curve (6500K to 1900K) to preserve melatonin.",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "sunset_time_hh_mm": {
+            "type": "string"
+          },
+          "bedtime_hh_mm": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "sunset_time_hh_mm",
+          "bedtime_hh_mm"
+        ]
+      }
+    }
+  ]
+}
